@@ -9,11 +9,20 @@ import ToDoList from "./components/ToDoList";
 import FilterSearch from "./components/FilterSearch";
 
 function App() {
-  const [inputValue, setInputValue] =
-    useState(""); /*pratis vrednost unesenu u input*/
+  const [inputValue, setInputValue] = useState("");
   const [todo, setTodo] = useState([
     { id: v4(), title: "jabuka" },
-  ]); /*pratis todo iteme*/
+    { id: v4(), title: "kruska" },
+    { id: v4(), title: "banana" },
+    { id: v4(), title: "sljiva" },
+    { id: v4(), title: "pomorandza" },
+    { id: v4(), title: "breskva" },
+    { id: v4(), title: "kajsija" },
+    { id: v4(), title: "orah" },
+    { id: v4(), title: "badem" },
+    { id: v4(), title: "avokado" },
+    { id: v4(), title: "mandarina" },
+  ]);
 
   const [filter, setFilter] = useState("");
 
