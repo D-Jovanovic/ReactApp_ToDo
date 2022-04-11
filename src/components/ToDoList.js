@@ -14,7 +14,6 @@ function ToDoList(props) {
             value={item.title}
             onChange={(event) => event.preventDefault()}
           />
-          <button>Edit</button>
           <button onClick={() => deleteHandler(item)}>Delete</button>
         </li>
       ))}
