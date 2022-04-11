@@ -1,8 +1,17 @@
 import React from 'react'
 
-function FilterSearch(props) {
+function FilterSearch({filter, setFilter}) {
+
+  const filterChangeHandler = event => {
+    setFilter(event.target.value)
+  }
+  
   return (
-    <div>FilterSearch</div>
+    <input 
+          type="text"
+          placeholder="Search for item"
+          value={filter}
+          onChange={filterChangeHandler}/>
   )
 }
 

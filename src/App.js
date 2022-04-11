@@ -13,6 +13,8 @@ function App() {
     useState(""); /*pratis vrednost unesenu u input*/
   const [todo, setTodo] = useState([{id: v4(), title: "jabuka"}]); /*pratis todo iteme*/
 
+  const [filter, setFilter] = useState("");
+
   return (
     <div className="holder">
       <div className="toDo">
@@ -27,7 +29,7 @@ function App() {
             setTodo={setTodo}
           />
         </div>
-        <FilterSearch />
+        <FilterSearch filter={filter} setFilter={setFilter}/>
         <div>
           <ToDoList todo={todo} setTodo={setTodo} />
         </div>
