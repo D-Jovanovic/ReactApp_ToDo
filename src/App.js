@@ -11,7 +11,9 @@ import FilterSearch from "./components/FilterSearch";
 function App() {
   const [inputValue, setInputValue] =
     useState(""); /*pratis vrednost unesenu u input*/
-  const [todo, setTodo] = useState([{id: v4(), title: "jabuka"}]); /*pratis todo iteme*/
+  const [todo, setTodo] = useState([
+    { id: v4(), title: "jabuka" },
+  ]); /*pratis todo iteme*/
 
   const [filter, setFilter] = useState("");
 
@@ -29,7 +31,12 @@ function App() {
             setTodo={setTodo}
           />
         </div>
-        <FilterSearch filter={filter} setFilter={setFilter}/>
+        <FilterSearch
+          filter={filter}
+          setFilter={setFilter}
+          todo={todo}
+          setTodo={setTodo}
+        />
         <div>
           <ToDoList todo={todo} setTodo={setTodo} />
         </div>
