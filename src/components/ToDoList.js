@@ -17,6 +17,8 @@ function ToDoList(props) {
           <button onClick={() => deleteHandler(item)}>Delete</button>
         </li>
       ))}
+
+      {/*filter(f => f.includes(props.filter) || props.filter === "")*/}
     </div>
   );
 }

@@ -5,6 +5,8 @@ function FilterSearch({filter, setFilter}) {
   const filterChangeHandler = event => {
     setFilter(event.target.value)
   }
+
+  console.log("nesto", filter);
   
   return (
     <input 

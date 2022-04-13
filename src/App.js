@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Form from "./components/Form";
 import ToDoList from "./components/ToDoList";
 import FilterSearch from "./components/FilterSearch";
+import Pagination from "./components/Pagination";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -25,6 +26,9 @@ function App() {
   ]);
 
   const [filter, setFilter] = useState("");
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
 
   return (
     <div className="holder">
@@ -47,7 +51,17 @@ function App() {
           setTodo={setTodo}
         />
         <div>
-          <ToDoList todo={todo} setTodo={setTodo} />
+          <ToDoList todo={todo} setTodo={setTodo} filter={filter} />
+        </div>
+        <div>
+          <Pagination
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            itemsPerPage={itemsPerPage}
+            setItemsPerPage={setItemsPerPage}
+            todo={todo}
+            setTodo={setTodo}
+          />
         </div>
       </div>
     </div>
